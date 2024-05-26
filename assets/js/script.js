@@ -75,6 +75,10 @@ document.addEventListener('DOMContentLoaded', () => {
       img.src = activeQuestion.imgSrc;
       img.style.width = '300px';
 
+      if (window.innerWidth <= 600) {
+         img.style.width = '200px';
+      }
+
       activeQuestion.isChecking = false;
       setupAnswers(activeQuestion);
    }
