@@ -1,0 +1,118 @@
+html,
+body {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   position: relative;
+   background-color: #121212;
+   color: #ffffff;
+   font-family: 'Roboto', sans-serif;
+}
+
+.screen {
+   width: 100%;
+   height: 100vh;
+   display: none;
+   overflow: hidden;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.screen img {
+   width: 700px;
+}
+
+.screen.win img {
+   width: 430px;
+}
+
+.visible {
+   display: flex;
+}
+
+.heading {
+   text-align: center;
+   font-weight: 400;
+}
+
+.btn {
+   padding: 12px 24px; /* Увеличение отступов */
+   font-size: 18px; /* Увеличение размера шрифта */
+   cursor: pointer;
+   border: 2px solid rgba(255, 255, 255, 0.5); /* Светлая граница */
+   border-radius: 20px; /* Более округлые углы */
+   background-color: transparent;
+   color: #ffffff;
+   transition: all 0.3s ease;
+}
+
+.btn:hover {
+   background-color: rgba(255, 255, 255, 0.1); /* Легкий белый фон при наведении */
+   border-color: rgba(255, 255, 255, 0.8); /* Усиление контрастности границы */
+}
+
+.answer-list {
+   list-style-type: none;
+   padding: 0;
+   display: grid;
+   grid-template-columns: repeat(2, 300px);
+   gap: 10px;
+}
+
+.answer {
+   width: 100%;
+   text-align: center;
+   padding: 10px;
+   border: 2px solid #ffffff; /* Белая граница */
+   border-radius: 20px;
+   background-color: transparent; /* Прозрачный фон */
+   color: #ffffff;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.answer.active {
+   background-color: rgba(255, 165, 0, 0.2);
+}
+
+.answer.right {
+   animation: pulse 1s infinite;
+   background-color: rgba(0, 128, 0, 0.5);
+   color: #fff;
+   border-color: #fff;
+}
+
+.social {
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   bottom: 25px;
+   right: 25px;
+}
+
+.social-link {
+   max-width: 30px;
+   max-height: 30px;
+}
+
+.social a {
+   margin-bottom: 20px;
+}
+
+@keyframes pulse {
+   0% {
+      transform: scale(1);
+      opacity: 1;
+   }
+   50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+   }
+   100% {
+      transform: scale(1);
+      opacity: 1;
+   }
+}
